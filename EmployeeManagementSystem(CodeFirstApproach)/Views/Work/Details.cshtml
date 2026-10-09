@@ -1,0 +1,143 @@
+﻿@model EmployeeManagementSystem_CodeFirstApproach_.Models.Employee
+
+@{
+    ViewBag.Title = "Employee Details";
+    bool isAdmin = Session["Role"] as string == "Admin";
+}
+
+<div class="page-heading">
+    <div>
+        <h2>Employee Details</h2>
+        <p class="text-muted">
+            Complete information for employee #@Model.EmployeeId
+        </p>
+    </div>
+
+    @if (isAdmin)
+    {
+        @Html.ActionLink(
+                 "Edit Employee",
+                 "UpdateEmployee",
+                 "Work",
+                 new { id = Model.EmployeeId },
+                 new { @class = "btn btn-primary" })
+    }
+</div>
+
+<div class="panel-card employee-details-card">
+
+    <div class="employee-profile-header">
+        <div class="employee-avatar">
+            @(!string.IsNullOrWhiteSpace(Model.EmployeeName)
+                ? Model.EmployeeName.Substring(0, 1).ToUpper()
+                : "E")
+        </div>
+
+        <div>
+            <h3>@Model.EmployeeName</h3>
+            <p class="text-muted">
+                @Model.EmployeeDesignation
+            </p>
+            <span class="employee-id-badge">
+                Employee ID: #@Model.EmployeeId
+            </span>
+        </div>
+    </div>
+
+    <hr />
+
+    <h4 class="details-section-title">
+        Personal Information
+    </h4>
+
+    <dl class="employee-details-grid">
+
+        <dt>Full Name</dt>
+        <dd>@Model.EmployeeName</dd>
+
+        <dt>Email Address</dt>
+        <dd>@Model.EmployeeEmail</dd>
+
+        <dt>Contact Number</dt>
+        <dd>@Model.EmployeeContact</dd>
+
+        <dt>Address</dt>
+        <dd>
+            @(string.IsNullOrWhiteSpace(Model.EmployeeAddress)
+                ? "Not provided"
+                : Model.EmployeeAddress)
+        </dd>
+
+        <dt>Aadhaar Number</dt>
+        <dd>
+            @(string.IsNullOrWhiteSpace(Model.EmployeeAadharId)
+                ? "Not provided"
+                : Model.EmployeeAadharId)
+        </dd>
+
+        <dt>PAN Number</dt>
+        <dd>
+            @(string.IsNullOrWhiteSpace(Model.EmployeePancard)
+                ? "Not provided"
+                : Model.EmployeePancard)
+        </dd>
+
+    </dl>
+
+    <hr />
+
+    <h4 class="details-section-title">
+        Employment Information
+    </h4>
+
+    <dl class="employee-details-grid">
+
+        <dt>Employee ID</dt>
+        <dd>#@Model.EmployeeId</dd>
+
+        <dt>Designation</dt>
+        <dd>@Model.EmployeeDesignation</dd>
+
+        <dt>Department</dt>
+        <dd>@Model.EmployeeDepatment</dd>
+
+        <dt>Salary</dt>
+        <dd>
+            @Model.EmployeeSalary.ToString("N2")
+        </dd>
+
+    </dl>
+
+    <hr />
+
+    <div class="form-actions">
+
+        @if (isAdmin)
+        {
+            @Html.ActionLink(
+                     "Edit Employee",
+                     "UpdateEmployee",
+                     "Work",
+                     new { id = Model.EmployeeId },
+                     new { @class = "btn btn-primary" })
+
+            @Html.ActionLink(
+                     "Back to Employee List",
+                     "Index",
+                     "Work",
+                     null,
+                     new { @class = "btn btn-light" })
+        }
+        else
+        {
+            @Html.ActionLink(
+                     "Back to Dashboard",
+                     "Index",
+                     "Home",
+                     null,
+                     new { @class = "btn btn-light" })
+        }
+
+    </div>
+
+</div>

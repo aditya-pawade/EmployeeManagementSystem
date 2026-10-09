@@ -1,0 +1,469 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    background: #f5f7fb;
+    color: #243247;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.body-content {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    min-height: 80vh;
+}
+
+.navbar {
+    background: #142b46 !important;
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.nav-link {
+    color: #e0e9f5 !important;
+}
+
+    .nav-link:hover {
+        color: #ffffff !important;
+    }
+
+h1, h2, h3 {
+    color: #1b2e49;
+    font-weight: 650;
+}
+
+.page-heading,
+.dashboard-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+    .page-heading h2,
+    .dashboard-welcome h1 {
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+
+.panel-card,
+.dashboard-card {
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 3px 14px rgba(24, 45, 75, .04);
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    max-width: 760px;
+}
+
+    .search-form .form-control {
+        flex: 1;
+        min-width: 0;
+    }
+
+.form-control {
+    min-height: 42px;
+    border: 1px solid #d9e1ec;
+    border-radius: 7px;
+    box-shadow: none;
+}
+
+    .form-control:focus {
+        border-color: #3975c6;
+        box-shadow: 0 0 0 3px rgba(57, 117, 198, .12);
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: 600;
+    }
+
+.btn {
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 9px 15px;
+}
+
+.btn-primary {
+    background: #245ca6;
+    border-color: #245ca6;
+}
+
+    .btn-primary:hover {
+        background: #194780;
+        border-color: #194780;
+    }
+
+.employee-table {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+    .employee-table thead th {
+        background: #f6f8fc;
+        color: #53647c;
+        border-bottom: 1px solid #e5eaf1;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+        white-space: nowrap;
+    }
+
+    .employee-table td {
+        padding: 15px 12px;
+        border-color: #edf0f5;
+    }
+
+.action-cell {
+    white-space: nowrap;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.empty-state {
+    text-align: center;
+    color: #69788d;
+    padding: 36px !important;
+}
+
+.form-card {
+    max-width: 950px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 24px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #edf0f5;
+    padding-top: 22px;
+    margin-top: 12px;
+}
+
+.dashboard-welcome {
+    background: #eaf1fb;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+    .dashboard-welcome p {
+        margin-bottom: 0;
+        color: #5d6f87;
+    }
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #245ca6;
+    font-weight: 700;
+}
+
+.role-label {
+    background: #ffffff;
+    border: 1px solid #d8e4f4;
+    border-radius: 20px;
+    padding: 7px 14px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-heading {
+    font-size: 20px;
+    margin: 28px 0 16px;
+}
+
+.dashboard-grid,
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    color: inherit;
+    text-decoration: none !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+    .dashboard-card:hover {
+        color: inherit;
+        transform: translateY(-3px);
+        box-shadow: 0 9px 24px rgba(24, 45, 75, .09);
+    }
+
+.dashboard-icon,
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf1fb;
+    color: #245ca6;
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.dashboard-card h3 {
+    font-size: 18px;
+}
+
+.dashboard-card p,
+.stat-label {
+    color: #69788d;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #245ca6;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    font-size: 34px;
+    margin: 8px 0;
+}
+
+.auth-wrapper {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(24, 45, 75, .07);
+}
+
+.register-card {
+    max-width: 620px;
+}
+
+.auth-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+    .auth-heading .brand-icon {
+        margin-bottom: 10px;
+    }
+
+    .auth-heading h2 {
+        margin-bottom: 8px;
+    }
+
+    .auth-heading p,
+    .auth-footer {
+        color: #69788d;
+    }
+
+.auth-footer {
+    margin: 22px 0 0;
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 850px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 14px;
+    margin: 25px 0;
+}
+
+    .profile-grid dt {
+        color: #69788d;
+    }
+
+    .profile-grid dd {
+        overflow-wrap: anywhere;
+    }
+
+@media (max-width: 767px) {
+    .page-heading,
+    .dashboard-welcome {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-grid,
+    .stats-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .search-form {
+        flex-wrap: wrap;
+    }
+
+        .search-form .form-control {
+            flex-basis: 100%;
+        }
+
+    .panel-card,
+    .auth-card {
+        padding: 18px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+        .profile-grid dd {
+            margin-bottom: 12px;
+        }
+}
+
+.employee-details-card {
+    max-width: 1000px;
+    padding: 32px;
+}
+
+.employee-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+    .employee-profile-header h3 {
+        margin: 0 0 6px;
+        font-size: 26px;
+    }
+
+    .employee-profile-header p {
+        margin-bottom: 8px;
+    }
+
+.employee-avatar {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #eaf1fb;
+    color: #245ca6;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.employee-id-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #f0f4fa;
+    color: #53647c;
+    font-size: 13px;
+}
+
+.details-section-title {
+    font-size: 18px;
+    margin: 24px 0 20px;
+}
+
+.employee-details-grid {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 18px 24px;
+    margin: 0 0 24px;
+}
+
+    .employee-details-grid dt {
+        color: #69788d;
+        font-weight: 600;
+    }
+
+    .employee-details-grid dd {
+        margin: 0;
+        color: #243247;
+        overflow-wrap: anywhere;
+    }
+
+@media (max-width: 600px) {
+    .employee-details-card {
+        padding: 20px;
+    }
+
+    .employee-profile-header {
+        align-items: flex-start;
+    }
+
+    .employee-avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .employee-details-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+        .employee-details-grid dd {
+            margin-bottom: 14px;
+        }
+}

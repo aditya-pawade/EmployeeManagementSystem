@@ -1,0 +1,83 @@
+﻿@model EmployeeManagementSystem_CodeFirstApproach_.Models.Employee
+
+<div class="form-grid">
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeName)
+        @Html.TextBoxFor(m => m.EmployeeName,
+                 new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EmployeeName,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeEmail)
+        @Html.TextBoxFor(m => m.EmployeeEmail,
+                 new { @class = "form-control", type = "email" })
+        @Html.ValidationMessageFor(m => m.EmployeeEmail,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeContact)
+        @Html.TextBoxFor(m => m.EmployeeContact,
+                 new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EmployeeContact,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeDesignation)
+        @Html.TextBoxFor(m => m.EmployeeDesignation,
+                 new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EmployeeDesignation,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeDepatment)
+        @Html.TextBoxFor(m => m.EmployeeDepatment,
+                 new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EmployeeDepatment,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeSalary)
+        @Html.TextBoxFor(m => m.EmployeeSalary,
+                 new
+                 {
+                     @class = "form-control",
+                     type = "number",
+                     step = "0.01",
+                     min = "0"
+                 })
+        @Html.ValidationMessageFor(m => m.EmployeeSalary,
+                 "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeeAadharId)
+        @Html.TextBoxFor(m => m.EmployeeAadharId,
+                 new
+                 {
+                     @class = "form-control",
+                     autocomplete = "off"
+                 })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmployeePancard)
+        @Html.TextBoxFor(m => m.EmployeePancard,
+                 new
+                 {
+                     @class = "form-control",
+                     autocomplete = "off"
+                 })
+    </div>
+
+    <div class="form-group full-width">
+        @Html.LabelFor(m => m.EmployeeAddress)
+        @Html.TextAreaFor(m => m.EmployeeAddress,
+                 new { @class = "form-control", rows = "3" })
+    </div>
+</div>
